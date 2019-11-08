@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="myDIV" class="header">
+        <h1>To-Do-App !</h1>
+        <h4>add new To-Do</h4>
+        <input type="text" id="myInput" placeholder="Enter new task...">
+        <br><br><br>
+        <span onclick="newElement()" onclick="myFunction()" class="addBtn">Add</span>
+    </div>
+    <center>
+    <h2>let's get some work done!</h2>
+
+
+    
+
+
+    <ul id="myUL" >
+    </ul>   
+    </center> 
+</body>
+<script>
+
+    // Create a new list item when clicking on the "Add" button
+    var ul =document.getElementById("myUL")
+    function newElement() {
+ 
+    if (inputValue === '') {
+        alert("You must write something!");
+  
+    
+    }
+
+else{
+    var li = document.createElement("li");
+
+
+    var s = document.createElement("span");
+
+
+    var inputValue = document.getElementById("myInput").value;
+    s.innerHTML=inputValue;
+    li.appendChild(s);
+
+
+
+
+    var BtnDeleteA = document.createElement("span");
+    BtnDeleteA.innerHTML='delete';
+
+    BtnDeleteA.classList.add("deleteBtn")
+
+    li.appendChild(BtnDeleteA);
+
+    
+
+    var BtnCompleteA = document.createElement("span");
+    BtnCompleteA.innerHTML='complete';
+    BtnCompleteA.classList.add("completeeBtn")
+
+    li.appendChild(BtnCompleteA);
+
+    
+
+    ul.appendChild(li)
+}
+
+
+/******************************Fin Create New Element**************************************/
+
+   /* document.getElementById("myInput").value = "";
+        for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+        }
+    }*/
+   
+    ul.addEventListener('click', function(ev) {
+        if(ev.target.className==='deleteBtn')
+      {  var par= ev.target.parentElement
+        
+        par.style.display="none"}
+ /* if (ev.target.id === 'com') {
+
+//   }*/
+});
+
+ul.addEventListener('click', function(ev) {
+        if(ev.target.className==='completeeBtn')
+      {  var par= ev.target.parentElement
+     var child1=par.firstChild
+     child1.style.textDecoration="line-through"}
+     BtnCompleteA.innerHTML='undo';
+
+
+ /* if (ev.target.id === 'com') {
+
+//   }*/
+});
+
+
+
+
+    }
+
+        </script>
+        
+</html>

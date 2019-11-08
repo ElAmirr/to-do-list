@@ -1,0 +1,50 @@
+.header {
+    background-color:rgb(70, 150, 229);
+    padding: 50px 100px;
+    color: white;
+    text-align: right;
+}
+input {
+    margin: 0;
+    border: none;
+    width: 75%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .addBtn {
+    padding: 10px 30px;
+    width: 25%;
+    border: solid rgb(116, 176, 236);
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius:10px;
+
+  }
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 17px 50px 12px 48px;
+    }
+#myUL {
+  list-style-type: none;
+}
+
+.deleteBtn{
+
+color: rgb(226, 141, 43);
+
+
+}
+
+
+.completeeBtn{
+
+  color: rgb(42, 143, 92);
+  
+  
+  }
+
+
